@@ -1,19 +1,37 @@
 // Exercice 3.6: Mini et maxi
 
-// A refaire
+let nbCount = 0;
+let nbSum = 0;
+let nbMin = 2 ** 53;
+let nbMax = 0;
 
-/* let n1 = parseInt(window.prompt("Entrez un premier nombre: "));
-let n2= parseInt(window.prompt("Entrez un deuxième nombre: "));
-let nombreNb = 2;
-let sum = 0;
-let average = 0;
+while(true) {
+    let nbInput = parseFloat(window.prompt("Saisis un nombre (0 pour finir)"));
 
-for (let i = n1; i <= n2; i++) {
-    sum += i;
-    average = (n1 + n2) / nombreNb;
+    let nb = parseFloat(nbInput);
+
+    if (nb === 0) {
+        break;
+    }
+
+    console.log(nb);
+    nbSum += nb;
+    nbCount++;
+
+    if (nb < nbMin) {
+        nbMin = nb;
+    }
+
+    if (nb > nbMax) {
+        nbMax = nb;
+    }
 }
 
-console.log(sum);
-console.log(average);
-console.log("minimum: " + n1)
-console.log("maximum: " + n2) */
+let nbAverage = nbSum / nbCount;
+
+console.log("BREAK")
+
+console.log("Somme de la série: " + nbSum);
+console.log("Moyenne de la série: " + nbAverage);
+console.log("Minimum de la série: " + nbMin);
+console.log("Maximum de la série: " + nbMax);

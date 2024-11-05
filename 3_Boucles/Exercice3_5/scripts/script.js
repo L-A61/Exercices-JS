@@ -1,29 +1,24 @@
 // Exercice 3.5: Moyenne
 
-// A refaire avec un while
+let nbCount = 0;
+let nbSum = 0;
 
 while(true) {
-    let Nb = parseInt(window.prompt("Saisis un nombre"))
+    let nbInput = parseFloat(prompt("Saisis un nombre (0 pour finir)"));
 
-    if (Nb === 0) {
-        break
+    let nb = parseFloat(nbInput);
+
+    if (nb === 0) {
+        break;
     }
-    console.log(Nb)
+    console.log(nb)
+    nbSum += nb;
+    nbCount++;
 }
 
-console.log("BREAK")
+let nbAverage = nbSum / nbCount;
 
+console.log("-----BREAK-----");
 
-/* let n1 = parseInt(window.prompt("Entrez un premier nombre: "));
-let n2= parseInt(window.prompt("Entrez un deuxième nombre: "));
-let nombreNb = 2;
-let sum = 0;
-let average = 0;
-
-for (let i = n1; i <= n2; i++) {
-    sum += i;
-    average = (n1 + n2) / nombreNb;
-}
-
-console.log(sum);
-console.log(average); */
+console.log("Somme de la série: " + nbSum);
+console.log("Moyenne de la série: " + nbAverage);
