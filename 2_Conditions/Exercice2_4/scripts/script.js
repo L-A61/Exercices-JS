@@ -1,28 +1,29 @@
 // Exercice 2-4: Remise
 
-let PU = window.prompt("Saisir prix unitaire: ")
-let QTECOM = window.prompt("Saisir quantité commandé: ")
-let PAP = PU * QTECOM
+let PU = parseFloat(prompt("Saisir prix unitaire: "));
+let QTECOM = parseInt(prompt("Saisir quantité commandé: "));
+let TOT = PU * QTECOM;
 
-let PORT;
-let REM;
+let PAP = 0;
+let PORT = 0;
+let REM = 0;
 
-let TOT = (PAP + PORT) - (PAP * REM)
-
-console.log(PAP)
-
-if (TOT > 500) {
-    PORT = 0
-} else {
-    PORT = 6 + (TOT * 0.02) // PORT à 2% du TOT
-}564
-
-if (TOT > 100 && TOT < 200) {
-   REM = 0.05 // REM à 5%
-} else if (TOT > 200) {
-    REM = 0.1 //REM à 10%
+if (TOT <= 500) {
+    PORT = TOT * 0.02;
+    if (PORT < 6) {
+        PORT = 6;
+    }
 }
 
+if (TOT >= 100 && TOT <= 200) {
+    REM = TOT * 0.005;
+} else if (TOT > 200) {
+    REM = TOT * 0.1;
+}
 
+PAP = TOT + PORT - REM;
 
-console.log(TOT)
+console.log("TOTAL: " + TOT);
+console.log("TOTAL: " + PORT);
+console.log("TOTAL: " + REM);
+console.log("TOTAL: " + PAP);
