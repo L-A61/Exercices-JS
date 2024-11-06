@@ -7,7 +7,7 @@ let nbInput; // variable global pour la saisis du nombre
 while(nbInput !== 0) {
     nbInput = parseFloat(prompt("Saisis un nombre (0 pour finir)")); // Saisis un nombre
 
-    console.log(nbInput) // Affiche dans la console la saisis
+    console.log(nbInput); // Affiche dans la console la saisis
     nbSum += nbInput; // la somme + la saisis
     nbCount++; // Augmentation du nombre de chiffre après la saisis 
 }
@@ -16,5 +16,5 @@ let nbAverage = nbSum / nbCount; // Calcule la moyenne, somme / le nombre de chi
 
 console.log("-----BREAK-----");
 
-console.log("Somme de la série: " + nbSum);
-console.log("Moyenne de la série: " + nbAverage);
+console.log("Somme de la série: " + nbSum); // Affiche la somme de la série selon la valeur de la variable nbSum
+console.log("Moyenne de la série: " + nbAverage); // Affiche la somme de la série selon la valeur de la variable nbAverage

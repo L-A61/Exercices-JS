@@ -20,27 +20,3 @@ while(i_Age < 100) { // While existe tant que l'âge saisis est inférieur à 10
 console.log("N° de jeunes: " + i_Young); // Affiche le nombre d'âge "jeune" saisis
 console.log("N° d'âges moyens': " + i_Average); // Affiche le nombre d'âge "moyen" saisis
 console.log("N° de personnes âgés: " + i_Elderly); // Affiche le nombre d'âge "vieux" saisis
-
-
-/*  ERREUR: n'augmente pas les variables globales avec un switch
-while(i_Age < 100) {
-     i_Age = prompt("Saisir un âge (un âge supérieur ou égal à 100 pour finir)");
-
-    switch(i_Age) {
-        case i_Age < 20:
-            i_Young++;
-            break;
-        
-        case i_Age >= 20 && i_Age <= 40:
-            i_Average++;
-            break;
-        
-        case i_Age > 40:
-            i_Elderly++;
-            break;
-        
-        default:
-            break;
-    }
-}
-*/
