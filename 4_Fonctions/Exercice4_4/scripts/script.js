@@ -1,6 +1,11 @@
 // Exercice 4.4: Menu
 
 // Menu 1: Multiples
+/**
+ * 
+ * @param {*} N 
+ * @param {*} X 
+ */
 function multiple(N, X) {
 
     for (let i = 1; i <= N; i++) { // For loop continue jusqu'à ce que i atteint la valeur saisis de N
@@ -10,6 +15,9 @@ function multiple(N, X) {
 }
 
 // Menu 2 Somme et moyenne
+/**
+ * 
+ */
 function sumAverage() {
     let nbCount = 0; // variable global pour le nombre de chiffre
     let nbSum = 0; // variable global pour la somme
@@ -32,6 +40,10 @@ function sumAverage() {
 }
 
 // Menu 3: Recherche du nombre de voyelles
+/**
+ * 
+ * @param {*} word 
+ */
 function vowelCount(word) {
     let vowel = "aeiouyAEIOUY"; // liste de voyelle à l'attention de l'algorithme
     let vowelCount = 0; // variable global pour la compte de voyelle détecté
@@ -49,6 +61,11 @@ function vowelCount(word) {
 }
 
 // Menu 4: Recherche du nombre des caracteres suivants
+/**
+ * 
+ * @param {*} _phrase 
+ * @param {*} _lettre 
+ */
 function letterCount(_phrase, _lettre) {
     let i_LettreCount = 0;
     for (let i = 0; i < _phrase.length; i++) {
@@ -58,7 +75,7 @@ function letterCount(_phrase, _lettre) {
             i_LettreCount++;
         }
     }
-    alert("Cette phrase contient "+i_LettreCount+" fois la/les lettre(s) "+_lettre);
+    alert("Cette phrase contient "+i_LettreCount+" fois la lettre "+_lettre);
 }
 
 let choice = parseInt(prompt("1- Multiples\n2- Somme et moyenne\n3- Recherche du nombre de voyelles\n4- Recherche du nombre des caracteres suivants"));
@@ -72,10 +89,10 @@ switch(choice) {
          sumAverage();
          break;
      case 3:
-         vowelCount(prompt("Sasir un mot ou une phrase"));
+         vowelCount(prompt("Sasir une phrase"));
          break;
     case 4:
-        letterCount(prompt("Saisis une phrase"), prompt("Saisis une ou plusieurs lettres"));
+        letterCount(prompt("Saisis une phrase"), prompt("Saisis un caractère"));
         break;
     default:
         break;

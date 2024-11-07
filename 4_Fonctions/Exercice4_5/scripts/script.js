@@ -1,1 +1,1 @@
-// Exercice 4.5: String token
+// Exercice 4.5: String token OPTIONNEL

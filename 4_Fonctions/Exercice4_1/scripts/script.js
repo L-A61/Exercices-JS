@@ -8,10 +8,8 @@ function produit(_x, _y) {
 }
 
 function afficheImg(_img) {
-    var img = document.createElement('img');
-    img.src = _img;
-    document.getElementById('_image').appendChild(img);
+    document.write('<img src="' + _img + '"')
 }
 
 produit(prompt("Saisir un premier nombre pour calculer son cube et son produit"), prompt("Saisir un deuxième nombre pour calculer le produit du premier chiffre"));
-afficheImg("/Exercice4_1/assets/papillon.jpg");
+afficheImg("assets/papillon.jpg");
